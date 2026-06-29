@@ -50,8 +50,8 @@ function Footer() {
 
           <div className="space-y-3 text-gray-400">
             <p>📍 Delhi, India</p>
-            <p>📞 +91 9876543210</p>
-            <p>✉ info@bhoonkjunction.com</p>
+            <p>📞 +91 9971387997</p>
+            <p>✉ bhookjunction4@gmail.com</p>
           </div>
         </div>
 
@@ -64,12 +64,7 @@ function Footer() {
 
           <div className="flex gap-4">
 
-            <a
-              href="#"
-              className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center hover:bg-orange-500 transition"
-            >
-              <FaFacebookF />
-            </a>
+          
 
             <a
               href="#"
@@ -78,19 +73,9 @@ function Footer() {
               <FaInstagram />
             </a>
 
-            <a
-              href="#"
-              className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center hover:bg-orange-500 transition"
-            >
-              <FaTwitter />
-            </a>
+          
 
-            <a
-              href="#"
-              className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center hover:bg-orange-500 transition"
-            >
-              <FaLinkedinIn />
-            </a>
+          
 
           </div>
         </div>
