@@ -1,49 +1,52 @@
 import { motion } from "framer-motion";
 import {
   FaHamburger,
-  FaPizzaSlice,
-  FaGlassWhiskey,
-  FaTruck,
+  FaMotorcycle,
+  FaMugHot,
   FaLeaf,
-  FaIceCream,
+  FaStar,
+  FaUtensils,
 } from "react-icons/fa";
 
 const services = [
   {
+    icon: <FaUtensils size={40} />,
+    title: "Fresh Momos",
+    desc: "Steamed, Pan Fry & Tandoori Momos prepared fresh with authentic flavors.",
+  },
+  {
     icon: <FaHamburger size={40} />,
-    title: "Healthy Burgers",
-    desc: "Freshly prepared burgers with premium ingredients.",
+    title: "Veg Grill Burger",
+    desc: "Loaded with fresh vegetables, cheese, and delicious sauces in every bite.",
   },
   {
-    icon: <FaPizzaSlice size={40} />,
-    title: "Delicious Pizza",
-    desc: "Wood-fired pizzas with rich flavors and fresh toppings.",
+    icon: <FaMugHot size={40} />,
+    title: "Hot & Cold Beverages",
+    desc: "Refreshing Cold Coffee and tasty snacks to perfectly complement your meal.",
   },
   {
-    icon: <FaGlassWhiskey size={40} />,
-    title: "Fresh Juices",
-    desc: "Natural juices made from seasonal fruits.",
-  },
-  {
-    icon: <FaTruck size={40} />,
+    icon: <FaMotorcycle size={40} />,
     title: "Fast Delivery",
-    desc: "Quick and reliable doorstep delivery.",
+    desc: "Quick and reliable doorstep delivery so your food reaches hot and fresh.",
   },
   {
     icon: <FaLeaf size={40} />,
-    title: "Healthy Meals",
-    desc: "Balanced meals for a healthier lifestyle.",
+    title: "Fresh Ingredients",
+    desc: "Every dish is prepared using premium quality vegetables and fresh ingredients.",
   },
   {
-    icon: <FaIceCream size={40} />,
-    title: "Desserts",
-    desc: "Sweet treats to complete your meal.",
+    icon: <FaStar size={40} />,
+    title: "Best Quality",
+    desc: "Great taste, hygienic preparation, and excellent customer service every time.",
   },
 ];
 
 function Services() {
   return (
-    <section id="services" className="bg-slate-950 py-24 px-6">
+    <section
+      id="services"
+      className="bg-slate-950 py-24 px-6"
+    >
       <div className="max-w-7xl mx-auto">
 
         <motion.div
@@ -52,18 +55,21 @@ function Services() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
+
           <h4 className="text-orange-500 uppercase tracking-widest font-semibold">
             Our Services
           </h4>
 
-          <h2 className="text-5xl font-bold mt-4">
-            What We Serve
+          <h2 className="text-5xl font-bold mt-4 text-white">
+            Why Choose Bhoonk Junction?
           </h2>
 
-          <p className="text-gray-400 mt-5 max-w-2xl mx-auto">
-            We prepare every meal with fresh ingredients, great taste, and
-            exceptional quality to give you the best dining experience.
+          <p className="text-gray-400 mt-5 max-w-2xl mx-auto leading-8">
+            From delicious momos to refreshing cold coffee, we serve freshly
+            prepared food with premium ingredients, hygienic cooking, and fast
+            delivery to make every meal memorable.
           </p>
+
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -72,22 +78,26 @@ function Services() {
 
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 80 }}
+              initial={{ opacity: 0, y: 70 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.15 }}
+              transition={{ duration: 0.5, delay: index * 0.15 }}
               viewport={{ once: true }}
-              className="bg-slate-900 rounded-3xl p-8 text-center hover:-translate-y-3 hover:shadow-orange-500/30 hover:shadow-2xl duration-300"
+              whileHover={{
+                y: -12,
+                scale: 1.03,
+              }}
+              className="bg-slate-900 rounded-3xl p-8 text-center border border-slate-800 hover:border-orange-500 hover:shadow-2xl hover:shadow-orange-500/20 transition-all duration-300"
             >
 
-              <div className="text-orange-500 flex justify-center mb-6">
+              <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-500">
                 {item.icon}
               </div>
 
-              <h3 className="text-2xl font-bold mb-4">
+              <h3 className="text-2xl font-bold text-white mb-4">
                 {item.title}
               </h3>
 
-              <p className="text-gray-400">
+              <p className="text-gray-400 leading-7">
                 {item.desc}
               </p>
 
@@ -96,6 +106,7 @@ function Services() {
           ))}
 
         </div>
+
       </div>
     </section>
   );

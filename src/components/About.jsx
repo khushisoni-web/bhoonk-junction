@@ -30,20 +30,20 @@ function About() {
             About Us
           </h4>
 
-          <h2 className="text-5xl font-bold mt-4">
-            Fresh Food, Happy People
-          </h2>
+          <h2 className="text-5xl md:text-6xl font-extrabold mt-4 bg-gradient-to-r from-orange-400 via-yellow-400 to-red-500 bg-clip-text text-transparent">
+  Fresh Food, Happy People
+</h2>
 
-          <p className="text-gray-300 mt-6 leading-8">
+          <p className="text-gray-300 text-lg mt-6 leading-8">
             At <span className="text-orange-500 font-semibold">Bhoonk Junction</span>,
             we serve healthy, delicious, and freshly prepared meals using
             high-quality ingredients. Our mission is to make healthy eating
             enjoyable without compromising on taste.
           </p>
 
-          <button className="mt-8 bg-orange-500 px-7 py-3 rounded-full hover:bg-orange-600 transition">
-            Learn More
-          </button>
+          <button className="mt-8 bg-orange-500 text-white font-semibold px-8 py-3 rounded-full hover:bg-orange-600 hover:scale-105 transition duration-300 shadow-lg shadow-orange-500/30">
+  Learn More
+</button>
         </motion.div>
 
       </div>
