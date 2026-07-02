@@ -87,20 +87,9 @@ export default function Order() {
 const handleSubmit = async (event) => {
   event.preventDefault();
 
- 
   if (!validateForm()) return;
 
   try {
-
-  alert("HANDLE SUBMIT");
-
-  // if (!validateForm()) return;
-
-  alert("Validation Passed");
-
-  try {
-    alert("Before Fetch");
-
     const response = await fetch("http://localhost:5000/api/order", {
       method: "POST",
       headers: {
@@ -118,9 +107,6 @@ const handleSubmit = async (event) => {
       }),
     });
 
-
- 
-
     const data = await response.json();
 
     if (!response.ok) {
@@ -128,19 +114,15 @@ const handleSubmit = async (event) => {
     }
 
     setSubmitted(true);
-
-    alert("After Fetch");
-
-    const data = await response.json();
-
     console.log(data);
-
 
   } catch (error) {
     console.error(error);
     alert(error.message);
   }
 };
+
+
   
   const inputClass =
     "w-full rounded-2xl border border-white/10 bg-white/[0.06] px-4 py-3 text-sm text-white placeholder:text-slate-500 outline-none transition duration-300 focus:border-orange-400 focus:bg-white/[0.09] focus:shadow-[0_0_0_4px_rgba(249,115,22,0.12)]";
@@ -347,6 +329,7 @@ const handleSubmit = async (event) => {
             )}
 
             <motion.button
+
  
   type="submit"
 
@@ -354,6 +337,15 @@ const handleSubmit = async (event) => {
   onClick={() => alert("BUTTON CLICKED")}
 
   className="mt-6 w-full rounded-2xl bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 px-6 py-4 text-base font-black text-white"
+
+  whileHover={{ scale: 1.03 }}
+  whileTap={{ scale: 0.98 }}
+  initial={{ opacity: 0, y: 18 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.55, delay: 0.35, ease: "easeOut" }}
+  type="submit"
+  className="mt-6 w-full rounded-2xl bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 px-6 py-4 text-base font-black text-white shadow-2xl shadow-orange-500/25 transition-all duration-300 hover:from-orange-600 hover:via-orange-400 hover:to-amber-500 hover:shadow-orange-500/40"
+
 >
   🍔 Place Order
 </motion.button>
@@ -362,7 +354,8 @@ const handleSubmit = async (event) => {
       </section>
     </main>
   );
+
  
 }
-}
+
 
