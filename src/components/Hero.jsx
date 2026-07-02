@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 function Hero() {
@@ -42,21 +43,21 @@ function Hero() {
 
           <div className="mt-10 flex flex-wrap gap-5">
 
-            <a
-              href="#menu"
-              className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full font-bold transition duration-300 hover:scale-105 shadow-lg shadow-orange-500/30"
-            >
-              🍔 Order Now
-            </a>
+  <Link
+    to="/order"
+    className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full font-bold transition duration-300 hover:scale-105 shadow-lg shadow-orange-500/30"
+  >
+    🍔 Order Now
+  </Link>
 
-            <a
-              href="#about"
-              className="border-2 border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-white px-8 py-4 rounded-full font-bold transition duration-300"
-            >
-              Explore More
-            </a>
+  <a
+    href="#about"
+    className="border-2 border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-white px-8 py-4 rounded-full font-bold transition duration-300"
+  >
+    Explore More
+  </a>
 
-          </div>
+</div>
 
         </motion.div>
 
@@ -81,7 +82,7 @@ function Hero() {
               duration: 4,
               repeat: Infinity,
             }}
-            src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=900&q=80"
+            src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=900&q=80"
             alt="Delicious Food"
             className="relative rounded-3xl shadow-2xl w-full hover:scale-105 transition duration-500 border-4 border-orange-500/20"
           />

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import vegMomo from "../assets/menu/veg-momo.webp";
 import paneerMomo from "../assets/menu/paneer-momo.webp";
 import panFryMomo from "../assets/menu/pan-fry-momo.avif";
@@ -127,11 +128,12 @@ function FeaturedMenu() {
                   {item.price}
                 </p>
 
-                <button
-                  className="mt-6 w-full bg-orange-500 hover:bg-orange-600 hover:scale-105 text-white py-3 rounded-xl font-bold transition duration-300 shadow-lg shadow-orange-500/30"
-                >
-                  Order Now
-                </button>
+              <Link
+  to="/order"
+  className="mt-6 w-full bg-orange-500 hover:bg-orange-600 py-3 rounded-xl font-semibold transition text-center block text-white hover:scale-105"
+>
+  Order Now
+</Link>
 
               </div>
 

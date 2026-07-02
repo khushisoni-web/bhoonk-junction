@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
@@ -87,12 +88,12 @@ function Navbar() {
 
         {/* Desktop Button */}
 
-        <a
-          href="#menu"
-          className="hidden md:block bg-orange-500 hover:bg-orange-600 hover:scale-105 px-7 py-3 rounded-full font-bold text-white transition duration-300 shadow-lg shadow-orange-500/30"
-        >
-          🍔 Order Now
-        </a>
+       <Link
+  to="/order"
+  className="hidden md:block bg-orange-500 hover:bg-orange-600 hover:scale-105 px-7 py-3 rounded-full font-bold text-white transition duration-300 shadow-lg shadow-orange-500/30"
+>
+  🍔 Order Now
+</Link>
 
         {/* Mobile Button */}
 
@@ -151,13 +152,13 @@ function Navbar() {
             Contact
           </a>
 
-          <a
-            href="#menu"
-            onClick={() => setMenuOpen(false)}
-            className="inline-block bg-orange-500 hover:bg-orange-600 hover:scale-105 px-7 py-3 rounded-full font-bold text-white transition duration-300 shadow-lg shadow-orange-500/30"
-          >
-            🍔 Order Now
-          </a>
+         <Link
+  to="/order"
+  onClick={() => setMenuOpen(false)}
+  className="inline-block bg-orange-500 hover:bg-orange-600 hover:scale-105 px-7 py-3 rounded-full font-bold text-white transition duration-300 shadow-lg shadow-orange-500/30"
+>
+  🍔 Order Now
+</Link>
 
         </div>
 
