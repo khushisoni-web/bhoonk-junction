@@ -4,11 +4,11 @@ import nodemailer from "nodemailer";
 const router = express.Router();
 
 router.post("/", async (req, res) => {
-  console.log("=================================");
+  console.log("");
   console.log("✅ Order API Hit");
   console.log("Received Body:");
   console.log(req.body);
-  console.log("=================================");
+  console.log("");
 
   const {
     name,
