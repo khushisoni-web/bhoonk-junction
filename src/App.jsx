@@ -9,7 +9,7 @@ import FeaturedMenu from "./components/FeaturedMenu";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
-import Order from "./pages/Order";
+import Order from "./pages/order";
 
 function Home() {
   return (
