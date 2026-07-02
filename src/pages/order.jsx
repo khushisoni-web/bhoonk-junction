@@ -88,9 +88,21 @@ export default function Order() {
   const handleSubmit = async (event) => {
   event.preventDefault();
 
+<<<<<<< HEAD
   if (!validateForm()) return;
 
   try {
+=======
+  alert("HANDLE SUBMIT");
+
+  // if (!validateForm()) return;
+
+  alert("Validation Passed");
+
+  try {
+    alert("Before Fetch");
+
+>>>>>>> d598b6f (Added order page and backend integration)
     const response = await fetch("http://localhost:5000/api/order", {
       method: "POST",
       headers: {
@@ -108,6 +120,7 @@ export default function Order() {
       }),
     });
 
+<<<<<<< HEAD
     const data = await response.json();
 
     if (!response.ok) {
@@ -115,6 +128,13 @@ export default function Order() {
     }
 
     setSubmitted(true);
+=======
+    alert("After Fetch");
+
+    const data = await response.json();
+
+    console.log(data);
+>>>>>>> d598b6f (Added order page and backend integration)
 
   } catch (error) {
     console.error(error);
@@ -327,7 +347,12 @@ export default function Order() {
             )}
 
             <motion.button
+<<<<<<< HEAD
   type="submit"
+=======
+  type="button"
+  onClick={() => alert("BUTTON CLICKED")}
+>>>>>>> d598b6f (Added order page and backend integration)
   className="mt-6 w-full rounded-2xl bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 px-6 py-4 text-base font-black text-white"
 >
   🍔 Place Order
@@ -337,4 +362,8 @@ export default function Order() {
       </section>
     </main>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> d598b6f (Added order page and backend integration)
